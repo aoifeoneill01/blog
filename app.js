@@ -6,7 +6,7 @@ const Blog = require('./models/blog.js');
 
 const app = express();
 
-const dbURI = '<insert db credentials>';
+const dbURI = '<Enter database credentials>';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true  })
   .then((result) => console.log('connected to db'))
@@ -50,11 +50,13 @@ app.post('/blogs', (req, res) => {
 
 app.get('/blogs/:id', (req, res) => {
    const id = req.params.id;
+   console.log(id);
    Blog.findById(id)
    .then(result => {
+    console.log(result);
       res.render('details', { blog: result });
    }).catch(err => {
-       console.log('error blog singular');
+       console.log(err);
    });
 });
 

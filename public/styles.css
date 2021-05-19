@@ -50,3 +50,15 @@ input, textarea{
     cursor: pointer;
     background-color: rgba(0,0,0,0.2);
 }
+.index-blog h3{
+    margin: 0;
+    font-family: freight-big-pro, serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+.index-blog{
+    padding: 30px;
+    width: 60%;
+    border-left: 3px solid;
+    margin: 30px;
+}

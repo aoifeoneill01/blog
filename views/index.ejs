@@ -12,14 +12,14 @@
 
     <%- include('./partials/head.ejs') %>
 
-    <h2>Blogs</h2>
-
  <% blogs.forEach(blog => { %>
 
+  <div class="index-blog">
   <a href="/blogs/<%= blog._id %>">
     <h3><%= blog.title %></h3>    
     <p><%= blog.snippet %></p>
   </a>
+</div>
 
    <% }); %>
 
